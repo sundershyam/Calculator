@@ -1,32 +1,21 @@
 function keypress(classname,inputid){
    var clic = document.getElementsByClassName(classname);
 for(i=0;i<clic.length;i++){
-   const showindex = document.createElement("h1");
-   showindex.innerHTML=i;
 
    clic[i].addEventListener("click",function(){
-      const index = showindex.innerHTML;
-      var input1 =document.getElementById(inputid);
-      if(input1.innerHTML.length<5){
-        if(input1.innerText.length==0 && index=="0"){
-        }
-        else{ 
-         if(input1.innerText.length==0 && index=="10"){
-            
-         }
+      var index = this.innerText;
+      var input = document.getElementById(inputid);
+      if(input.innerText.length<5){
+         if(index=="0"){}
          else{
-            if(index=="10"){
-               input1.innerText+=".";
-            }
-            if(input1.innerHTML.includes(".")){
-                 
-            } 
-            else{
-               input1.innerText+=index;
-            }
+           if(input.innerText.includes(".") && index=="."){
+           }
+           else{
+            input.innerText+=index;
+           }
          }
-        }
       }
+
    });
 }
 }
@@ -34,22 +23,18 @@ for(i=0;i<clic.length;i++){
 
 function selectopeartor(classname,inputid){
    var clic = document.getElementsByClassName(classname);
-   var checko="23";
 for(i=0;i<clic.length;i++){
-   const showindex = document.createElement("h1");
-   showindex.innerHTML=i;
-
    clic[i].addEventListener("click",function(){
-      const index = showindex.innerHTML;
-      var input =document.getElementById(inputid);
-      var input2 =document.getElementById("cal-screen-display-input2");
-      if(input2.innerHTML.length==0 && input.innerHTML.length<=1){
-         input.innerHTML=this.innerHTML;
-      }    
+      var index = this.innerText;
+      // var input =document.getElementById(inputid);
+      // var input2 =document.getElementById("cal-screen-display-input2");
+      // if(input.innerHTML.length<=1){
+      //    input.innerHTML=index;
+      // }   
+      alert(document.getElementById("cal-screen-display-input1").innerText); 
    });
 }
 }
-
 function makeeqa(){
    // keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input1");
    // keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input2");
@@ -60,7 +45,10 @@ function makeeqa(){
    if(operator.innerText.length==0){
       keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input1");
    } 
-
+  if(input1.innerText.length>0){
+         selectopeartor("c-p-k-o-b-operator","cal-screen-display-operator");
+      }
+   
 }
 
 makeeqa();
