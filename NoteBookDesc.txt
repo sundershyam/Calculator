@@ -1,0 +1,8 @@
+This is the calculater project done by me and my Good friend Akshit.
+
+In this we have done normal working of calculater with showing history dynamicaly.
+
+HTML, CSS, JS only
+
+Thankyou...
+thank you bro for awesome code

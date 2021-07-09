@@ -1,0 +1,68 @@
+.calculater{
+    background-color: rgb(18, 60, 138);
+    height:70%;
+    width: 70%;   
+}
+
+.cal-screen{
+   height:30%;
+   background-color: transparent;
+   padding:20px 5px;
+}
+
+.cal-screen-display{
+    height: 100%;
+    width: auto;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    font-size: 50px;
+}
+
+.cal-pannel{
+    height:70%;
+    background-color:transparent;
+    padding: 5px;
+}
+.cal-pannel-keyboard{
+    height:100%;
+    width: auto;
+    background-color: black;
+    display: flex;
+}
+
+.cal-pannel-keyboard-pannel{
+ 
+    width: 69%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 1%;
+}
+.cal-pannel-keyboard-pannel-buttons{
+      background-color: black;
+      color:white;
+      font-size: 30px;
+}
+.cal-pannel-keyboard-operations{
+    width: 30%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1%;
+}
+.cal-pannel-keyboard-operations-buttons{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cal-pannel-history{
+    height: 100%;
+    width: 40%;
+    background-color: yellow;
+    display: none;
+}
