@@ -8,7 +8,24 @@ for(i=0;i<clic.length;i++){
       const index = showindex.innerHTML;
       var input1 =document.getElementById(inputid);
       if(input1.innerHTML.length<5){
-         input1.innerHTML+=index;
+        if(input1.innerText.length==0 && index=="0"){
+        }
+        else{ 
+         if(input1.innerText.length==0 && index=="10"){
+            
+         }
+         else{
+            if(index=="10"){
+               input1.innerText+=".";
+            }
+            if(input1.innerHTML.includes(".")){
+                 
+            } 
+            else{
+               input1.innerText+=index;
+            }
+         }
+        }
       }
    });
 }
@@ -40,10 +57,9 @@ function makeeqa(){
    var input1 = document.getElementById("cal-screen-display-input1");
    var input2 = document.getElementById("cal-screen-display-input2");
    var operator = document.getElementById("cal-screen-display-operator");
-   if(input2.innerText.length==0 && operator.innerText.length==0){
+   if(operator.innerText.length==0){
       keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input1");
-   }
-  
+   } 
 
 }
 
