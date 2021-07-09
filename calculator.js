@@ -3,15 +3,23 @@ function keypress(classname,inputid){
 for(i=0;i<clic.length;i++){
 
    clic[i].addEventListener("click",function(){
-      var index = this.innerText;
+      var key = this.innerText;
       var input = document.getElementById(inputid);
       if(input.innerText.length<5){
-         if(index=="0"){}
+         if(key=="0"){
+            if(input.innerText.length==0){
+               input.innerText="";
+              
+            }
+            else{
+               input.innerText+=key;
+            }
+         }
          else{
-           if(input.innerText.includes(".") && index=="."){
+           if(input.innerText.includes(".") && key=="."){
            }
            else{
-            input.innerText+=index;
+            input.innerText+=key;
            }
          }
       }
@@ -21,8 +29,9 @@ for(i=0;i<clic.length;i++){
 }
 
 
-function selectopeartor(classname,inputid){
-   var clic = document.getElementsByClassName(classname);
+function selectoperator(classname,inputid){
+   var clic = document.getElementByClassName(classname);
+   alert(clic);
 for(i=0;i<clic.length;i++){
    clic[i].addEventListener("click",function(){
       var index = this.innerText;
@@ -35,10 +44,12 @@ for(i=0;i<clic.length;i++){
    });
 }
 }
+
+
 function makeeqa(){
    // keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input1");
    // keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input2");
-   // selectopeartor("c-p-k-o-b-operator","cal-screen-display-operator");
+   // selectoperator("c-p-k-o-b-operator","cal-screen-display-operator");
    var input1 = document.getElementById("cal-screen-display-input1");
    var input2 = document.getElementById("cal-screen-display-input2");
    var operator = document.getElementById("cal-screen-display-operator");
@@ -46,7 +57,8 @@ function makeeqa(){
       keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input1");
    } 
   if(input1.innerText.length>0){
-         selectopeartor("c-p-k-o-b-operator","cal-screen-display-operator");
+   selectoperator("c-p-k-o-b-operator","cal-screen-display-operator");
+   alert("Functioncalled")
       }
    
 }
