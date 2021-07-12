@@ -20,36 +20,34 @@ no-repeat;background-size: 100% 100%;">
                 <div class="calculater">
           <div class="cal-screen">
            <div class="cal-screen-display">
-            <span id="cal-screen-display-input1"></span>
-          <span id="cal-screen-display-operator"></span>
-            <span id="cal-screen-display-input2"></span>
+            <span id="cal-screen-display-input"></span>
             <span id="cal-screen-display-Result" style="position: fixed;right:25%;font-size:40;">0</span>
            </div>
           </div>
           <div class="cal-pannel">
            <div class="cal-pannel-keyboard">
            <div class="cal-pannel-keyboard-pannel">
-           <button class="cal-pannel-keyboard-pannel-buttons" style="grid-column: 1/3;grid-row:4;">0</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">1</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">2</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">3</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">4</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">5</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">6</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">7</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">8</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">9</button>
-           <button class="cal-pannel-keyboard-pannel-buttons">.</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys" style="grid-column: 1/3;grid-row:4;">0</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">1</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">2</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">3</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">4</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">5</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">6</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">7</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">8</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">9</button>
+           <button class="cal-pannel-keyboard-pannel-buttons keys">.</button>
            <!-- <button class="cal-pannel-keyboard-pannel-buttons" style="grid-column: 3/4;">.</button> -->
            </div>
           <div class="cal-pannel-keyboard-operations">
           <button class="cal-pannel-keyboard-operations-buttons" style="grid-column: 1/3;" onclick="clearscreen();">Clear</button>
           <!-- <button class="cal-pannel-keyboard-operations-buttons" style="grid-column: 3;grid-row: 1/4;">History</button> -->
-          <button class="cal-pannel-keyboard-operations-buttons c-p-k-o-b-operator" style="grid-column: 1/2;">+</button>
-          <button class="cal-pannel-keyboard-operations-buttons c-p-k-o-b-operator" style="grid-column: 2/3;">-</button>
-          <button class="cal-pannel-keyboard-operations-buttons c-p-k-o-b-operator" style="grid-column: 1/2;">*</button>
-          <button class="cal-pannel-keyboard-operations-buttons c-p-k-o-b-operator" style="grid-column: 2/3;">/</button>
-          <button class="cal-pannel-keyboard-operations-buttons" style="grid-column: 1/3;">=</button>
+          <button class="cal-pannel-keyboard-operations-buttons keys" style="grid-column: 1/2;">+</button>
+          <button class="cal-pannel-keyboard-operations-buttons keys" style="grid-column: 2/3;">-</button>
+          <button class="cal-pannel-keyboard-operations-buttons keys" style="grid-column: 1/2;">*</button>
+          <button class="cal-pannel-keyboard-operations-buttons keys" style="grid-column: 2/3;">/</button>
+          <button class="cal-pannel-keyboard-operations-buttons" onclick="findresult()" style="grid-column: 1/3;">=</button>
           </div>
 
 

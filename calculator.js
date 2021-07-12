@@ -5,60 +5,39 @@ for(i=0;i<clic.length;i++){
    clic[i].addEventListener("click",function(){
       var key = this.innerText;
       var input = document.getElementById(inputid);
-      if(input.innerText.length<5){
-         if(key=="0"){
-            if(input.innerText.length==0){
-               input.innerText="";
-              
-            }
-            else{
-               input.innerText+=key;
-            }
+      if(key=="0"&&input.innerText.length==0){
+
+      }
+      else{
+        if(key=="+" || key=="-" || key=="*" || key=="/"){
+         if(input.innerText.includes("+") || input.innerText.includes("-") || input.innerText.includes("+") || input.innerText.includes("/")){
+            console.log("yes");
          }
          else{
-           if(input.innerText.includes(".") && key=="."){
-           }
-           else{
             input.innerText+=key;
-           }
          }
+        }
+        else{
+           input.innerText+=key;
+        }
       }
-
    });
 }
 }
 
+keypress("keys","cal-screen-display-input");
 
-function selectoperator(classname,inputid){
-   var Element = document.getElementByClassName(classname);
 
+function findresult(){
+   var input = document.getElementById("cal-screen-display-input");
+   var result = document.getElementById("cal-screen-display-Result");
+   let evaluation = eval(input.innerText)
+  result.innerText=evaluation;
+  input.innerText='';
 }
-
-function makeeqa(){
-   // keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input1");
-   // keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input2");
-   // selectoperator("c-p-k-o-b-operator","cal-screen-display-operator");
-   // var input1 = document.getElementById("cal-screen-display-input1");
-   // var input2 = document.getElementById("cal-screen-display-input2");
-   // var operator = document.getElementById("cal-screen-display-operator");
-   
-   
-}
-
-makeeqa();
-
 
 
 function clearscreen(){
-   document.getElementById("cal-screen-display-input1").innerText="";
-   document.getElementById("cal-screen-display-input2").innerText="";
-   document.getElementById("cal-screen-display-operator").innerText="";
+   document.getElementById("cal-screen-display-input").innerText="";
    document.getElementById("cal-screen-display-Result").innerText="0";
-   
 }
-// if(input1.innerHTML.length>0){
-//    selectopeartor("c-p-k-o-b-operator","cal-screen-display-operator");
-// }
-// if(input1.innerHTML.length>0 && operator.innerHTML.length==1){
-//    keypress("cal-pannel-keyboard-pannel-buttons","cal-screen-display-input2");
-// }
