@@ -1,5 +1,5 @@
 .calculater{
-    background-color: rgb(18, 60, 138);
+    background-color: gray;
     height:70%;
     width: 70%;   
 }
@@ -20,7 +20,6 @@
     padding-left: 3%;
     font-size: 50px;
 }
-
 .cal-pannel{
     height:70%;
     background-color:transparent;
@@ -29,35 +28,38 @@
 .cal-pannel-keyboard{
     height:100%;
     width: auto;
-    background-color: black;
+    background-color: white;
     display: flex;
 }
 
 .cal-pannel-keyboard-pannel{
  
     width: 69%;
-    background-color: black;
+    background-color: white;
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 1%;
 }
 .cal-pannel-keyboard-pannel-buttons{
-      background-color: black;
-      color:white;
+      background-color: white;
+      color:black;
       font-size: 30px;
+      box-shadow: 0px 0px 30px blue;
 }
 .cal-pannel-keyboard-operations{
     width: 30%;
-    background-color: black;
+    background-color: white;
     display: grid;
     grid-template-columns: auto auto;
     padding: 1%;
 }
 .cal-pannel-keyboard-operations-buttons{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 20px;
     font-weight: bold;
+    box-shadow: 0px 0px 30px red;
+
 }
 
 .cal-pannel-history{
