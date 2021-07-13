@@ -63,8 +63,16 @@
 }
 
 .cal-pannel-history{
-    height: 100%;
-    width: 40%;
-    background-color: yellow;
+    width: 30%;
+    background-color: transparent;
     display: none;
+    box-shadow: 0px 0px 30px orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#showhistory{
+    background-color: white;
+    font-size: 20px;
 }
