@@ -9,16 +9,9 @@ function keypress(classname, inputid) {
             input.innerText = key;
          }
          else {
-            if (key == "+" || key == "-" || key == "*" || key == "/") {
-               if (input.innerText.includes("+") || input.innerText.includes("-") || input.innerText.includes("*") || input.innerText.includes("/")) {
-               }
-               else {
-                  input.innerText += key;
-               }
-            }
-            else {
+            
                input.innerText += key;
-            }
+            
          }
       });
    }
@@ -68,29 +61,9 @@ function createhistory(inputbyuser, evaluation) {
          localStorage.setItem("history", JSON.stringify(store));
    }
 }
-function findresult() {
-   var input = document.getElementById("cal-screen-display-input");
-   var result = document.getElementById("cal-screen-display-Result");
-   if (input.innerText.includes("+") || input.innerText.includes("-") || input.innerText.includes("*") || input.innerText.includes("/")) {
-      let inputbyuser = input.innerText;
-      console.log(input.innerText);
-      let evaluation = eval(input.innerText)
-      result.innerText = evaluation;
-const history = localStorage.getItem("history");
-   //  if(history){
- 
-   // }
-   // else{
 
-   // }
-   //  }
-   //  else{
 
-   //  } 
-      createhistory(inputbyuser, evaluation);
-      input.innerText = '';
-   }
-}
+
 
 
 function clearscreen() {
@@ -111,4 +84,31 @@ object.forEach(function (result) {
 function showhistory(){
   document.getElementById("cal-pannel-keyboard-operations").style.display="none";
   document.getElementById("cal-pannel-history").style.display="flex";
+}
+function reset(){
+   document.getElementById("cal-pannel-keyboard-operations").style.display="grid";
+   document.getElementById("cal-pannel-history").style.display="none";
+}
+function historytoinput(){
+   const hist = document.getElementsByClassName("listshow");
+   for(i=0;i<hist.length;i++){
+      hist[i].addEventListener("click",function(){
+          var value = this.innerText;
+          var input = document.getElementById("cal-screen-display-input");
+          input.innerText=value;
+      });
+   }
+}
+historytoinput();
+function findresult() {
+   var input = document.getElementById("cal-screen-display-input");
+   var result = document.getElementById("cal-screen-display-Result");
+   if (input.innerText.includes("+") || input.innerText.includes("-") || input.innerText.includes("*") || input.innerText.includes("/")) {
+      let inputbyuser = input.innerText;
+      let evaluation = eval(input.innerText)
+      result.innerText = evaluation;
+      createhistory(inputbyuser, evaluation);
+      input.innerText = '';
+      historytoinput();
+   }
 }
